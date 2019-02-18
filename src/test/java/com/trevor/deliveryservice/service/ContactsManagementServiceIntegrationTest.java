@@ -13,7 +13,7 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.NONE)
-public class ContactsManagementServiceTest {
+public class ContactsManagementServiceIntegrationTest {
 
     @Autowired
     private ContactsManagementService contactsManagementService;
@@ -30,7 +30,7 @@ public class ContactsManagementServiceTest {
         // Test saving the contact
         CustomerContact savedContact = contactsManagementService.save(contact);
 
-        // verify the save
+        // Verify the save
         assertNotNull(savedContact);
         assertNotNull(savedContact.getId());
         assertEquals("Jenifer", savedContact.getFirstName());
