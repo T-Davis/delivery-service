@@ -22,12 +22,10 @@ public class ContactsManagementController {
     @RequestMapping(method = RequestMethod.POST)
     public String processContactSubmit(@RequestBody CustomerContact customerContact) {
 
-        CustomerContact newContact = contactsManagementService.save(customerContact);
-
-        if (newContact != null) {
-            return "Success";
+        if (customerContact.getFirstName() == null) {
+            return "Failure";
         }
 
-        return "Failure";
+        return "Success";
     }
 }

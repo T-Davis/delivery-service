@@ -31,4 +31,16 @@ public class ContactsManagementControllerIntegrationTest {
         // Verify the outcome
         assertThat(outcome, is(equalTo("Success")));
     }
+
+    @Test
+    public void testAddContactFirstNameMissing() {
+        CustomerContact contact = new CustomerContact();
+
+        // POST CustomerContact
+        String outcome = contactsManagementController.processContactSubmit(contact);
+
+        // Verify the outcome
+        assertThat(outcome, is(equalTo("Failure")));
+
+    }
 }
