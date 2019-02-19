@@ -13,7 +13,7 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.NONE)
-public class ContactsManagementServiceIntegrationTest {
+public class ContactsManagementControllerServiceIntegrationTest {
 
     @Autowired
     private ContactsManagementService contactsManagementService;

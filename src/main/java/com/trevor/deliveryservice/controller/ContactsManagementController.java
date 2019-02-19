@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/addContact")
-public class ContactsManagement {
+public class ContactsManagementController {
 
     private ContactsManagementService contactsManagementService;
 
     @Autowired
-    public ContactsManagement(ContactsManagementService contactsManagementService) {
+    public ContactsManagementController(ContactsManagementService contactsManagementService) {
         this.contactsManagementService = contactsManagementService;
     }
 

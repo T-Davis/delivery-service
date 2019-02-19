@@ -17,7 +17,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class ContactsManagementServiceUnitTest {
+public class ContactsManagementControllerServiceUnitTest {
 
     @Mock
     private CustomerContactRepository customerContactRepository;
