@@ -13,7 +13,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.mockito.Matchers.any;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -54,6 +54,23 @@ public class ContactsManagementControllerUnitTest {
         // simulate POST
         mockMvc.perform(post("/addContact", newContact))
                 .andExpect(status().isOk())
+                .andReturn();
+    }
+
+    @Test
+    public void testSaveContactServiceRuleNotSatisfied() throws Exception {
+
+        // setup mock response of NULL
+        when(contactsManagementService.save(any(CustomerContact.class)))
+                .thenReturn(null);
+
+        // simulate POST data
+        CustomerContact newContact = new CustomerContact();
+        newContact.setLastName("Johnson");
+
+        // simulate POST
+        mockMvc.perform(post("/addContact", newContact))
+                .andExpect(status().is(302))
                 .andReturn();
     }
 
