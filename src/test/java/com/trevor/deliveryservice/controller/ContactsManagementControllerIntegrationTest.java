@@ -19,7 +19,7 @@ public class ContactsManagementControllerIntegrationTest {
     private ContactsManagementController contactsManagementController;
 
     @Test
-    public void testAddContactHappyPath() {
+    public void testSaveContactHappyPath() {
 
         CustomerContact contact = new CustomerContact();
         contact.setFirstName("Jenny");
@@ -33,7 +33,7 @@ public class ContactsManagementControllerIntegrationTest {
     }
 
     @Test
-    public void testAddContactFirstNameMissing() {
+    public void testSaveContactFirstNameMissing() {
         CustomerContact contact = new CustomerContact();
 
         // POST CustomerContact
