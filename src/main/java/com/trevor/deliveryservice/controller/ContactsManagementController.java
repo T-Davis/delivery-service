@@ -27,4 +27,10 @@ public class ContactsManagementController {
 
         return "Success";
     }
+
+    @RequestMapping(value = "/showAddContact", method = RequestMethod.GET)
+    public String showAddContact() {
+
+        return "/addContactForm";
+    }
 }
