@@ -22,10 +22,11 @@ public class ContactsManagementController {
     public String processContactSubmit(@ModelAttribute CustomerContact customerContact) {
 
         if (customerContact.getFirstName() == null) {
-            return "Failure";
+            return "redirect:/showAddContact";
         }
+        contactsManagementService.save(customerContact);
 
-        return "Success";
+        return "/addContactForm";
     }
 
     @RequestMapping(value = "/showAddContact", method = RequestMethod.GET)
