@@ -7,11 +7,13 @@ This is a test project for TDD, JUnit, Mockito
 - IntelliJ IDEA or other Java IDE
 - Java SDK (JDK) version 8-11 (I'm using OpenJDK 11)
 - Gradle (version 5+ if using JDK 11)
+- MySql
 
 ### Installing
 1. Clone or download the repo
 2. Import the project into your favorite IDE (listed above)
-3. Have fun!
+3. Setup database and update application.properties
+4. Have fun!
 
 ### Resources
 Learn more about Spring Framework and testing/mocking from the links below
