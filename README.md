@@ -14,7 +14,7 @@ This is a test project for TDD, JUnit, Mockito
 3. Have fun!
 
 ### Resources
-Learn more about Flutter, the open-source mobile application development SDK created by Google
+Learn more about Spring Framework and testing/mocking from the links below
 - [spring.io](https://spring.io/)
 - [junit.org](https://junit.org/junit4/)
 - [mockito.org](https://site.mockito.org/)
